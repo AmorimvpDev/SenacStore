@@ -1,0 +1,17 @@
+from django.urls import path
+from StoreApp import views
+
+urlpatterns = [
+    path('', views.index, name='index'),
+    path('produtos/', views.produto_lista, name = 'produto_lista'),
+    path('produtos/<int:id>', views.produto_lista_por_departamento, name = 'produto_lista_por_departamento'),
+         #se entro em um produto especifico, cai nessa url
+
+    path('produto/<int:id>', views.produto_detalhe, name = 'produto_detalhe'),
+            #url                                para visualizar essa view
+
+     path('sobre-a-empresa/', views.sobre_empresa, name = 'sobre_empresa'),
+     path('cadastro/', views.cadastro, name = 'cadastro'),
+     path('contato/', views.contato, name='contato')
+    
+]
