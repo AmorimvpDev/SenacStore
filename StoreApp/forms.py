@@ -7,6 +7,7 @@ class CadastroForm(forms.ModelForm):
     class Meta:
         model = Cliente # model que eu quero q ele monte um formulario
         fields = '__all__' #Aqui puxa todos os campos em que vou cadastrar que tem no models.py, nome, cpf, etc
+        
         #campos
         widgets = {
             'cpf': forms.TextInput(attrs={'class':'cpf'}),
